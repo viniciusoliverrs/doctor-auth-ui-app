@@ -1,8 +1,8 @@
 import 'package:doctor_ui_app/src/ui/theme/app_assets.dart';
-import 'package:doctor_ui_app/src/widget/custom_button.dart';
 import 'package:flutter/material.dart';
 
-import '../../../widget/custom_text_field.dart';
+import '../../widget/common_button.dart';
+import '../../widget/common_text_field.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({Key? key}) : super(key: key);
@@ -36,7 +36,7 @@ class SignInPage extends StatelessWidget {
             ),
           ),
           child: SingleChildScrollView(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
@@ -64,9 +64,9 @@ class SignInPage extends StatelessWidget {
                               fontWeight: FontWeight.w300,
                             ),
                           ),
-                          CustomTextField(
+                          const CommonTextField(
                             icon: Icons.email_outlined,
-                            keyboardType: TextInputType.emailAddress,
+                            keyboardType: TextInputType.emailAddress
                           ),
                           Text(
                             "Password",
@@ -75,7 +75,7 @@ class SignInPage extends StatelessWidget {
                               fontWeight: FontWeight.w300,
                             ),
                           ),
-                          CustomTextField(
+                          const CommonTextField(
                             icon: Icons.lock_outline,
                             keyboardType: TextInputType.text,
                             isSecret: true,
@@ -114,8 +114,8 @@ class SignInPage extends StatelessWidget {
                             ],
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(top: 16,bottom: 16),
-                            child: CustomButton(
+                            padding: const EdgeInsets.only(top: 16, bottom: 16),
+                            child: CommonButton(
                               text: "Sign In",
                               height: size.height * 0.07,
                               primaryColor: Colors.blue,
